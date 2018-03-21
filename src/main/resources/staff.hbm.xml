@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ruirui.bean.Staff" table="tb_staff" schema="db_ruirui">
+        <id name="staffId" column="staff_id" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <version name="staffVersion" column="staff_version" type="java.lang.Integer"/>
+        <property name="staffName" column="staff_name" type="java.lang.String"/>
+        <property name="staffWeage" column="staff_weage" type="java.lang.Integer"/>
+        <property name="staffAge" column="staff_age" type="java.lang.Byte"/>
+         <many-to-one name="dept" column="s_dept_id" class="com.ruirui.bean.Dept"/>
+    </class>
+</hibernate-mapping>

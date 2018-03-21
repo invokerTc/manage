@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.ruirui.bean.Student" table="tb_stu" schema="db_ruirui">
+        <id name="stuId" column="stu_id" type="java.lang.Integer">
+            <generator class="identity"/>
+        </id>
+        <version name="stuVersion" column="stu_version" type="java.lang.Integer"/>
+        <property name="stuName" column="stu_name" type="java.lang.String"/>
+        <property name="stuCourse" column="stu_course" type="java.lang.String"/>
+        <property name="stuScore" column="stu_score" type="java.lang.Integer"/>
+        <property name="stuAge" column="stu_age" type="java.lang.Byte"/>
+    </class>
+</hibernate-mapping>
